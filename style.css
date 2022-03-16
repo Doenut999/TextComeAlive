@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding-inline: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: blueviolet;
+}
+
+h2 {
+    position: relative;
+    font-size: 14vw;
+    color: blueviolet;
+    -webkit-text-stroke: 0.2vw green;
+    text-transform: uppercase;
+}
+
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    color: #01fe87;
+    -webkit-text-stroke: 0.2vw green;
+    border-right: 4px solid #01fe87;
+    overflow: hidden;
+    animation: anim 9s linear 1 normal;
+}
+
+@keyframes anim {
+
+    0%, 10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+
+}
